@@ -4,6 +4,10 @@ alias mci="mvn clean install"
 #Lets you do cat | xclip to copy standard out to your clipboard
 alias xclip="xclip -selection clipboard"
 
+notify () {
+        "$@"; notify-send -t 0 "$@ finished running"
+}
+
 export PS1='[\[\e[0;33m\]\u@\h\[\e[0m\] \w$(__git_ps1 " (\[\e[1;34m\]%s\[\e[0m\])")]$ '
 
 #What ports are things running on
